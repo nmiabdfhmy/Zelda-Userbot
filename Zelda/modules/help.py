@@ -5,8 +5,6 @@
 #
 """ Userbot help command """
 
-from prettytable import PrettyTable, NONE
-
 from Zelda import CHANNEL
 from Zelda import CMD_HANDLER as cmd
 from Zelda import CMD_HELP, ICON_HELP, bot
@@ -34,28 +32,17 @@ async def help(event):
         else:
             await edit_delete(event, f"`{args}` **Bukan Nama Modul yang Valid.**")
     else:
-        ac = PrettyTable()
-        ac.header = False
-        ac.title = "Zelda-UserBot Modules"
-        ac.align = "l"
-        ac.vertical_char = "|"
-        ac.horizontal_char = "—"
-        ac.junction_char = "-"
-        for x in split_list(sorted(CMD_HELP), 2):
-            ac.add_row([x[0], x[1] if len(x) >= 2 else None])
-
         user = await bot.get_me()
         string = ""
         for i in CMD_HELP:
             string += "📌 `" + str(i) + "` "
-            # string += f"`\t\t\t{ICON_HELP}\t\t\t"
 
         await edit_or_reply(
             event,
             f"**Daftar Perintah Untuk [ZELDA USERBOT](https://github.com/nmiabdfhmy/Zelda-Userbot) :**\n\n"
             f"**Jumlah : ** `{len(modules)}` Modules\n"
             f"**Owner : ** [Lord Zelda](https://t.me/UnrealZlda)\n\n"
-            f"```{ac}```"
+            f"{string}"
             f"\n\nJoin and Support @{CHANNEL}",
         )
         await event.reply(
