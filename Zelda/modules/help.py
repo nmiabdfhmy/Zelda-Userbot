@@ -12,6 +12,14 @@ from Zelda.utils import edit_delete, edit_or_reply, zelda_cmd
 
 modules = CMD_HELP
 
+def list_split(mList, n):
+    for x in range(0, len(mList), n):
+        spliter = mList[x: n+x]
+
+        if len(spliter) < n:
+            spliter = spliter + \
+                [None for y in range(n-len(spliter))]
+        yield spliter
 
 @zelda_cmd(pattern="help(?: |$)(.*)")
 async def help(event):
@@ -26,14 +34,9 @@ async def help(event):
         user = await bot.get_me()
         string = ""
 
-        # modules.sort()
-        cmd_list = list()
-        n = 30
+        strings = list(list_split(modules, 35))
+        mmk = str(strings)
 
-        for i in range(0, len(modules), n):
-            cmd_list.append(modules[i:i+n])
-   
-        mmk = str(cmd_list)
         kntl = (
             mmk.replace("], [", f"\n\n📌 MODULES :\n")
             .replace("[[", f"📌 MODULES :\n")
@@ -41,7 +44,9 @@ async def help(event):
             .replace("'\n", "\n")
             .replace("',", "")
             .replace("'", "• ")
+            .replace("]]", "")
         )
+        
         for i in CMD_HELP:
             string += "`" + str(i)
             string += f"`\t\t\t{ICON_HELP}\t\t\t"
