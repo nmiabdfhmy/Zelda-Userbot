@@ -30,8 +30,8 @@ async def help(event):
         cmd_list = list()
         n = 30
 
-        for i in range(0, len(CMD_HELP), n):
-            cmd_list.append(CMD_HELP[i:i+n])
+        for i in range(0, len(modules), n):
+            cmd_list.append(modules[i:i+n])
    
         mmk = str(cmd_list)
         kntl = (
