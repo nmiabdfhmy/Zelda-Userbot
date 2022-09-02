@@ -147,7 +147,7 @@ OWNER_ID = int(os.environ.get("OWNER_ID") or 0)
 GCAST_BL = int(os.environ.get("GCAST_BL") or 0)
 
 # Support
-GROUP = os.environ.get("GROUP", "UnrealBabies")
+GROUP = os.environ.get("GROUP", "HCMutualism")
 CHANNEL = os.environ.get("CHANNEL", "ZeldaProjects")
 
 # Heroku Credentials for updater.
@@ -556,7 +556,7 @@ with bot:
                     text="**ZELDA USERBOT**\n• **Owner Repo :** [Lord Zelda](https://t.me/UnrealZlda)\n• **Support :** @ZeldaProjects\n• **Repository :** [ZELDA USERBOT](https://github.com/nmiabdfhmy/Zelda-Userbot)",
                     buttons=[
                         [
-                            custom.Button.url("GROUP CHAT", "https://t.me/UnrealBabies"),
+                            custom.Button.url("GROUP CHAT", "https://t.me/HCMutualism"),
                             custom.Button.url(
                                 "REPO", "https://github.com/nmiabdfhmy/Zelda-Userbot"
                             ),
@@ -573,7 +573,7 @@ with bot:
                     text=f"**ZELDA USERBOT**\n• **UserMode:** [{user.first_name}](tg://user?id={user.id})\n• **Assistant:** {tgbotusername}\n**Support:** @ZeldaProjects",
                     buttons=[
                         [
-                            custom.Button.url("GROUP CHAT", "https://t.me/UnrealBabies"),
+                            custom.Button.url("GROUP CHAT", "https://t.me/HCMutualism"),
                             custom.Button.url(
                                 "REPO", "https://github.com/nmiabdfhmy/Zelda-Userbot"
                             ),

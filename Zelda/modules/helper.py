@@ -13,7 +13,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 async def usit(e):
     await e.edit(
         f"**Hai {DEFAULTUSER} Kalo Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `.help` Atau Bisa Minta Bantuan Ke:\n"
-        f"✣ **Group Support :** [UNREALBABIES](t.me/UnrealBabies)\n"
+        f"✣ **Group Support :** [UNREALBABIES](t.me/HCMutualism)\n"
         f"✣ **Channel :** [Zelda Projects](t.me/zldprojects)\n"
         f"✣ **Owner :** [Lord Zelda](t.me/UnrealZlda)\n"
         f"✣ **Repo :** [ZELDA USERBOT](https://github.com/nmiabdfhmy/Zelda-Userbot)\n"

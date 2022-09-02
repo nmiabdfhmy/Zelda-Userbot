@@ -33,11 +33,11 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 <a href="https://replit.com/@fhmyngrh/Zelda-String-Session"><img src="https://img.shields.io/badge/RUN-Get__String-red?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
 
 ### Deoloy To Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nmiabdfhmy/Zelda-Userbot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nmiabdfhmy/Deployer)
 
 ## Updates dan support
 
-Follow Channel [@ZeldaProjects](https://t.me/zeldaprojects) untuk info Update bot dan Gabung Group [@UnrealBabies](https://t.me/UnrealBabies) untuk untuk diskusi, pelaporan bug, dan bantuan tentang Zelda-Userbot.
+Follow Channel [@ZeldaProjects](https://t.me/zeldaprojects) untuk info Update bot dan Gabung Group [@HCMutualism](https://t.me/HCMutualism) untuk untuk diskusi, pelaporan bug, dan bantuan tentang Zelda-Userbot.
 
 ## © Credits
 #### Thanks To [Everyone](https://github.com/mrismanaziz/Man-Userbot/graphs/contributors) Who Has Helped Make This Userbot Awesome!

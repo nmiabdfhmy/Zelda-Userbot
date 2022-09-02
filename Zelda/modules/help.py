@@ -26,7 +26,7 @@ async def help(event):
         user = await bot.get_me()
         string = ""
 
-        modules.sort()
+        # modules.sort()
         cmd_list = list()
         n = 30
 

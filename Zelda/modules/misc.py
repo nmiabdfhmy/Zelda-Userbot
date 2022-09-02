@@ -117,7 +117,7 @@ async def repo_is_here(wannasee):
         f"Hey, I am using **ZELDA USERBOT**\n\n"
         f" __Thanks For Using me__\n\n"
         f"• **Userbot Version :** `{BOT_VER}@{UPSTREAM_REPO_BRANCH}`\n"
-        f"• **Group Support :** [UNREALBABIES](t.me/UnrealBabies)\n"
+        f"• **Group Support :** [UNREALBABIES](t.me/HCMutualism)\n"
         f"• **Channel :** [Zelda Projects](t.me/zldprojects)\n"
         f"• **Owner Repo :** [Lord Zelda](t.me/UnrealZlda)\n"
         f"• **Repo :** [ZELDA USERBOT](https://github.com/nmiabdfhmy/Zelda-Userbot)\n"
