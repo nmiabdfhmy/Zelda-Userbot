@@ -12,34 +12,6 @@ from Zelda.utils import edit_delete, edit_or_reply, zelda_cmd
 
 modules = CMD_HELP
 
-HELP_TEXT = """⭐ **MODULES PART 1**
-• `admin` • `pin` • `undelete` • `gmute` • `zombies` • `adzan` • `aeshtetic` • `afk` • `amongus` • `android` • `animals` • `animasi` • `anime` • `anti_spambot` • `antiflood` • `watch` • `randompp` • `glitch` • `grab` • `bannedall`
-
-⭐ **MODULES PART 2**
-• `rnupload` • `appmisc` • `arts` • `ascii` • `asupan` • `blacklist` • `ping` • `speedtest` • `broadcast` • `vcplugin` • `carbon` • `chat` • `invite` • `kickme` • `link` • `regexninja` • `scraper` • `chatbot` • `clone` • `convert`
-
-⭐ **MODULES PART 3**
-• `core` • `covid` • `membuat` • `custom` • `deepfry` • `direct` • `emojigames` • `json` • `eval` • `exec` • `term` • `fakeaction` • `fakegban` • `fban` • `figlet` • `file` • `filter` • `rgif` • `fun` • `funmemes`
-
-⭐ **MODULES PART 4**
-• `games` • `gcast` • `gucast` • `id` • `getmusic` • `gcommit` • `github` • `gkick` • `gban` • `gps` • `hash` • `base64` • `hazmat` • `helper` • `hentai` • `heroku` • `database` • `imgmeme` • `justfun` • `secretchat`
-
-⭐ **MODULES PART 5**
-• `kamuii` • `lastfm` • `locks` • `log` • `logo` • `lyrics` • `memes` • `scam` • `memify` • `mentions` • `send` • `random` • `sleep` • `repo` • `readme` • `restart` • `shutdown` • `raw` • `repeat` • `nekos`
-
-⭐ **MODULES PART 6**
-• `nhentai` • `notes` • `nsfw` • `war` • `view` • `open` • `dm` • `sendbot` • `tmsg` • `getlink` • `unbanall` • `limit` • `paste` • `pdf` • `phreaker` • `pic` • `pmbot` • `pmpermit` • `profil` • `punten`
-
-⭐ **MODULES PART 7**
-• `purge` • `quotly` • `rastick` • `reverse` • `salam` • `sangmata` • `download` • `tts` • `translate` • `removebg` • `ocr` • `google` • `wiki` • `barcode` • `image_search` • `ytdl` • `screenshot` • `currency` • `ud` • `sed`
-
-⭐ **MODULES PART 8**
-• `shazam` • `shortlink` • `sosmed` • `spam` • `ssvideo` • `stats` • `deteksi` • `stickers` • `sticker_v2` • `sudo` • `system` • `alive` • `tagger` • `tag` • `telegraph` • `tiktok` • `timedate` • `tiny` • `torrent` • `transform`
-
-⭐ **MODULES PART 8**
-• `update` • `getid` • `vcg` • `waifu` • `wallpaper` • `weather` • `webupload` • `welcome` • `whois` • `wordcloud` • `xiaomi` • `zipfile`
-"""
-
 
 @zelda_cmd(pattern="help(?: |$)(.*)")
 async def help(event):
@@ -53,15 +25,33 @@ async def help(event):
     else:
         user = await bot.get_me()
         string = ""
+
+        modules.sort()
+        cmd_list = list()
+        n = 30
+
+        for i in range(0, len(CMD_HELP), n):
+            cmd_list.append(CMD_HELP[i:i+n])
+   
+        mmk = str(cmd_list)
+        kntl = (
+            mmk.replace("], [", f"\n\n📌 MODULES :\n")
+            .replace("[[", f"📌 MODULES :\n")
+            .replace("']]", "")
+            .replace("'\n", "\n")
+            .replace("',", "")
+            .replace("'", "• ")
+        )
         for i in CMD_HELP:
             string += "`" + str(i)
             string += f"`\t\t\t{ICON_HELP}\t\t\t"
+
         await edit_or_reply(
             event,
             f"**Daftar Perintah Untuk [ZELDA USERBOT](https://github.com/nmiabdfhmy/Zelda-Userbot) :**\n\n"
             f"**Jumlah : ** `{len(modules)}` Modules\n"
             f"**Owner : ** [Lord Zelda](https://t.me/UnrealZlda)\n\n"
-            f"{HELP_TEXT}"
+            f"{kntl}"
             f"\n\nJoin and Support @{CHANNEL}",
         )
         await event.reply(
