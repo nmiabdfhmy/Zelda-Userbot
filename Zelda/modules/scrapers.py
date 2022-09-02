@@ -230,7 +230,7 @@ async def wiki(wiki_q):
         await wiki_q.client.send_file(
             wiki_q.chat_id,
             "output.txt",
-            thumb="userbot/resources/logo.jpg",
+            thumb="Zelda/resources/logo.jpg",
             reply_to=wiki_q.id,
             caption="**Output terlalu besar, dikirim sebagai file**",
         )

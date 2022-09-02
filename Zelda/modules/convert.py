@@ -83,7 +83,7 @@ async def cevir(event):
             await event.client.send_file(
                 event.chat_id,
                 "output.mp3",
-                thumb="userbot/resources/logo.jpg",
+                thumb="Zelda/resources/logo.jpg",
                 reply_to=rep_msg,
             )
             await xxx.delete()
@@ -109,7 +109,7 @@ async def cevir(event):
             await event.client.send_file(
                 event.chat_id,
                 "out.mp3",
-                thumb="userbot/resources/logo.jpg",
+                thumb="Zelda/resources/logo.jpg",
                 reply_to=rep_msg,
             )
         except BaseException:

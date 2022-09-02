@@ -84,7 +84,7 @@ async def _(event):
                 event.chat_id,
                 out_file,
                 force_document=True,
-                thumb="userbot/resources/logo.jpg",
+                thumb="Zelda/resources/logo.jpg",
                 allow_cache=False,
                 caption=f"`{cmd}`" if len(cmd) < 998 else None,
                 reply_to=reply_to_id,
@@ -137,7 +137,7 @@ async def run(event):
             event.chat_id,
             "output.txt",
             reply_to=event.id,
-            thumb="userbot/resources/logo.jpg",
+            thumb="Zelda/resources/logo.jpg",
             caption="**Output terlalu besar, dikirim sebagai file**",
         )
         return remove("output.txt")
@@ -175,7 +175,7 @@ async def terminal_runner(event):
             event.chat_id,
             "output.txt",
             reply_to=event.id,
-            thumb="userbot/resources/logo.jpg",
+            thumb="Zelda/resources/logo.jpg",
             caption="**Output terlalu besar, dikirim sebagai file**",
         )
         return remove("output.txt")
@@ -203,7 +203,7 @@ async def _(event):
                 event.chat_id,
                 out_file,
                 force_document=True,
-                thumb="userbot/resources/logo.jpg",
+                thumb="Zelda/resources/logo.jpg",
                 allow_cache=False,
                 reply_to=reply_to_id,
             )
