@@ -62,6 +62,7 @@ python-barcode
 python-dateutil
 python-dotenv
 pytube>=9.5.1
+prettytable
 pytz
 qrcode
 rarfile
